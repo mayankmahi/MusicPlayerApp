@@ -55,6 +55,7 @@ public class Album {
             }
             System.out.println(title + " there is no such song in album");
             return false;
+
         }
     }
 }
