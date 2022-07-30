@@ -1,6 +1,7 @@
 package com.mahi;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 
 public class Album {
     private String name;
@@ -8,7 +9,7 @@ public class Album {
     private ArrayList<Song> songs;
 
 //    Constructor
-    public Album(String name, String artist, ArrayList<Song> songs) {
+    public Album(String name, String artist) {
         this.name = name;
         this.artist = artist;
         this.songs = new ArrayList<Song>();
@@ -28,11 +29,11 @@ public class Album {
     public boolean addSong(String title, double duration){
         if(findSong(title) == null){
             songs.add(new Song(title, duration));
-            System.out.println(title + " Successfully added to the list");
+//            System.out.println(title + " Successfully added to the list");
             return true;
         }
         else {
-            System.out.println("Song with the name " + title + "already added in the list.");
+//            System.out.println("Song with the name " + title + "already added in the list.");
             return false
         }
     }
@@ -43,7 +44,7 @@ public class Album {
             PlayList.add(this.songs.get(index));
             return true;
         }
-        System.out.println("This album doesn't have song with trackNumber " + trackNumber);
+//        System.out.println("This album doesn't have song with trackNumber " + trackNumber);
         return false;
     }
 
@@ -53,7 +54,7 @@ public class Album {
                 PlayList.add(checkedSong);
                 return true;
             }
-            System.out.println(title + " there is no such song in album");
+//            System.out.println(title + " there is no such song in album");
             return false;
 
         }
